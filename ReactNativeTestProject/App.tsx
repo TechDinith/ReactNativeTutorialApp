@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
+import Header from "./component/header";
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -9,6 +10,7 @@ export default function App() {
   ]);
   return (
     <View style={styles.container}>
+      <Header />
       <View style={styles.content}>
         <View style={styles.list}>
           <FlatList
