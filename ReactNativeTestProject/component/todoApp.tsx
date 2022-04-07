@@ -7,17 +7,16 @@ import {
   View,
 } from "react-native";
 import { Provider, useSelector } from "react-redux";
-import AddTodo from "./component/addTodo";
-import Header from "./component/header";
-import TodoItem from "./component/todoItem";
-import { appStyles } from "./styles/styles";
-import store from "./_redux/store";
+import AddTodo from "./addTodo";
+import Header from "./header";
+import TodoItem from "./todoItem";
+import { appStyles } from "../styles/styles";
+import store from "../_redux/store";
 
 export default function TodoApp() {
-  //todo: refactor this code after this done still no update
   const [todos, setTodos] = useState<any>([]);
-
   const [editText, setEditText] = useState("");
+
   const mode = useSelector((state: any) => state.todoSlice.mode);
   const [modalVisible, setModalVisible] = useState(false);
 
